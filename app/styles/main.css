@@ -1,0 +1,139 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Header and nav styling */
+.header {
+  width: 100%;
+  background-color: black;
+  margin-bottom: 20px;
+  height: 52px;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar li {
+  position: relative;
+  display: inline;
+  font-size: 18pt;
+  float: right;
+  margin: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: red;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.navpadding {
+  height: 40px;
+}
+
+/* Content stylings */
+h2, h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 12pt;
+}
+
+.about {
+  background-color: #ffe5e5;
+  width: 100%;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-top: 2px solid red;
+}
+
+/* Custom page footer */
+.footer {
+
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Style show info */
+.currentseason {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 31%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.currentseason img {
+  height: 400px;
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+
+/* Style show details */
+.showdetails {
+  vertical-align: top;
+}
+
+.summary {
+  text-align: justify;
+}
+
+/* Center map */
+.mapcontainer {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+/*  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+}
