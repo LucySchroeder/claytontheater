@@ -7,7 +7,7 @@
  * # photos
  */
 angular.module('cctApp')
-  .directive('photo', function () {
+  .directive('photo', function ($timeout) {
     return {
       restrict: 'E',
       scope: {
@@ -21,7 +21,7 @@ angular.module('cctApp')
         console.log(scope.photos);
 
       	scope.next = function() {
-      		if (scope.currentIndex < 3) { //scope.photos.length -1
+      		if (scope.currentIndex < scope.photos.length - 1) { //scope.photos.length -1
             scope.currentIndex ++;
           } 
           else {
@@ -35,7 +35,7 @@ angular.module('cctApp')
             scope.currentIndex --;
           }
           else {
-            scope.currentIndex = 3; // scope.photos.length - 1
+            scope.currentIndex = scope.photos.length - 1; // scope.photos.length - 1
           }
           console.log(scope.currentIndex);
       	};
@@ -46,6 +46,21 @@ angular.module('cctApp')
       		});
           scope.photos[scope.currentIndex].visible = true;
       	});
+
+        // transition through slideshow on a timer
+        var timer;
+        var sliderFunc = function() {
+          timer = $timeout(function() {
+            scope.next();
+            timer = $timeout(sliderFunc, 5000);
+          }, 5000);
+        };
+
+        sliderFunc();
+
+        scope.$on('$destroy', function() {
+          $timeout.cancel(timer); // when the scope is getting destroyed, cancel the timer
+        });
       },
 
       templateUrl: 'views/photos.html'

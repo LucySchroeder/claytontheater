@@ -21,7 +21,8 @@ angular.module('cctApp')
         1990 play by American playwright August Wilson follows the lives of the Charles family and an heirloom, the \
         family piano. The play focuses on the tension between family members who treasure the piano as a link to \
         the family history, and those who want to sell the piano to improve the family\'s economic status. What The \
-        Piano Lesson finally seems to ask is: "What do you do with your legacy, and how do you best put it to use?"'
+        Piano Lesson finally seems to ask is: "What do you do with your legacy, and how do you best put it to use?"',
+        onsale: false
     },
     {
         name: 'The Women',
@@ -31,7 +32,8 @@ angular.module('cctApp')
         director: 'Vanessa Roman and Amy Ruprecht',
         summary: 'This witty comedy of manners follows a group of women through the perils of adultery, divorce and \
         finding a unique voice in a sea of gossip and innuendo. The 1936 play continues to echo a relevant look in \
-        the complex nature of relationships.'
+        the complex nature of relationships.',
+        onsale: true
     },
     {
         name: 'Inherit the Wind',
@@ -44,7 +46,8 @@ angular.module('cctApp')
         law. The theme of intellectual freedom explored in the play applies to many other ideological debates, such as \
         the McCarthy trials that were going on at the time it was written in 1955. According to the playwright, "We used \
         the teaching of evolution as a parable, a metaphor for any kind of mind control. It\'s not about science versus \
-        religion. It\'s about the right to think."'
+        religion. It\'s about the right to think."',
+        onsale: true
     }	
     ];
 

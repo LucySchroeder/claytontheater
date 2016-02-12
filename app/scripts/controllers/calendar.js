@@ -9,6 +9,7 @@
  */
 angular.module('cctApp')
   .controller('CalendarCtrl', function ($scope, $compile, uiCalendarConfig) {
+    // jshint unused: false
     /* date info */
     var date = new Date();
     var d = date.getDate();
@@ -30,6 +31,7 @@ angular.module('cctApp')
       {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
       {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
     ];
+
     /* event source that calls a function on every view switch */
     $scope.eventsF = function (start, end, timezone, callback) {
       var s = new Date(start).getTime() / 1000;
