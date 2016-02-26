@@ -51,26 +51,41 @@ angular.module('cctApp')
     }	
     ];
 
-    $scope.photos = [
+    $scope.photos1 = [
     {
         src: 'images/photo1.png',
         caption: 'The Piano Lesson',
-        visible: true
     },
     {
         src: 'images/photo2.jpg',
         caption: 'dont know what this picture is yet',
-        visible: true
     },
     {
         src: 'images/photo3.jpg',
         caption: 'caption number 3',
-        visible: true
     },
     {
         src: 'images/photo4.jpg',
         caption: 'little prince',
-        visible: true
+    }
+    ];
+
+    $scope.photos2 = [
+    {
+        src: 'images/photo5.jpg',
+        caption: 'Smaug',
+    },
+    {
+        src: 'images/photo6.jpg',
+        caption: 'Lady Macbeth',
+    },
+    {
+        src: 'images/photo7.jpg',
+        caption: 'hair and makeup',
+    },
+    {
+        src: 'images/photo8.jpg',
+        caption: 'noises off',
     }
     ];
 

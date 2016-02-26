@@ -95,6 +95,6 @@ angular.module('cctApp')
     };
 
     /* event sources array*/
-    $scope.eventSources = [$scope.showevents, $scope.auditionevents, $scope.workevents, $scope.otherevents];
+    $scope.eventSources = [$scope.showevents, $scope.auditionevents, $scope.workevents, $scope.otherevents, $scope.eventSource];
     $scope.eventSources2 = [$scope.eventSource];
   });
