@@ -17,8 +17,6 @@ angular.module('cctApp')
       // jshint unused: false
       link: function (scope, elem, attr) {
       	scope.currentIndex = 0;
-        console.log(scope.currentIndex);
-        console.log(scope.photos);
 
       	scope.next = function() {
       		if (scope.currentIndex < scope.photos.length - 1) { //scope.photos.length -1
@@ -27,7 +25,6 @@ angular.module('cctApp')
           else {
             scope.currentIndex = 0;
           }
-          console.log(scope.currentIndex);
       	};
 
       	scope.prev = function() {
@@ -37,7 +34,6 @@ angular.module('cctApp')
           else {
             scope.currentIndex = scope.photos.length - 1; // scope.photos.length - 1
           }
-          console.log(scope.currentIndex);
       	};
 
       	scope.$watch('currentIndex', function() {

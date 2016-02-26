@@ -60,17 +60,44 @@ p {
 .maincontent {
   background-color: #ffe5e5;
   width: 100%;
-  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 15px;
   margin-bottom: 5px;
   border-top: 2px solid red;
   text-align: center;
+}
+
+.membership,
+.volunteer {
+  position: relative;
+  display: inline-block;
+  width: 46%;
+  height:675px;
+  border: 5px solid red;
+  margin: 20px;
+  padding: 15px;
+  padding-top: 0px;
+  vertical-align: top;
+}
+
+.volunteer ul {
   list-style-type: none;
+  font-size: 12pt;
+}
+
+.audition {
+  background-color: #ffe5e5;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-top: 2px solid red;
 }
 
 /* Custom page footer */
 .footer {
-
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -127,9 +154,17 @@ p {
 
 /* Center map */
 .mapcontainer {
-  width: 600px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contactinfo {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 15px;
 }
 
 /* Center calendar */

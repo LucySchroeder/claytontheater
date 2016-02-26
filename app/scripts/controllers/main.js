@@ -74,6 +74,4 @@ angular.module('cctApp')
     }
     ];
 
-//    $scope.currentIndex = 0;
-
   });

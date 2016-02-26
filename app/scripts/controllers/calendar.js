@@ -17,38 +17,29 @@ angular.module('cctApp')
     var y = date.getFullYear();
 
     /* event source that pulls from google.com */
+    $scope.googleCalendarApiKey = 'AIzaSyANLHV8--YB2Bu_sskFWTVBWDbbh9d1spQ';
     $scope.eventSource = {
-            url: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic',
-            className: 'gcal-event',           // an option!
-            currentTimezone: 'America/Chicago' // an option!
+            googleCalendarId: 'cctcalendar@gmail.com',
+            url: 'https://calendar.google.com/calendar/embed?src=cctcalendar%40gmail.com&ctz=America/Chicago?key=AIzaSyANLHV8--YB2Bu_sskFWTVBWDbbh9d1spQ',
+            googleCalendarApiKey: 'AIzaSyANLHV8--YB2Bu_sskFWTVBWDbbh9d1spQ',
     };
     /* event source that contains custom events on the scope */
     $scope.showevents = [
-      {title: 'The Women',start: new Date(y, 2, 10, 19,0), end: new Date(y, 2, 10, 21,0),allDay:false},
-      {title: 'The Women',start: new Date(y, 2, 11, 19,0),allDay:false},
-      {title: 'The Women',start: new Date(y, 2, 12, 19,0),allDay:false},
+      {title: 'The Women',start: new Date(y, 2, 10, 20,0), end: new Date(y, 2, 10, 21,0),allDay:false},
+      {title: 'The Women',start: new Date(y, 2, 11, 20,0),allDay:false},
+      {title: 'The Women',start: new Date(y, 2, 12, 20,0),allDay:false},
       {title: 'The Women',start: new Date(y, 2, 13, 14,0),allDay:false},
-      {title: 'The Women',start: new Date(y, 2, 17, 19,0), end: new Date(y, 2, 10, 21,0),allDay:false},
-      {title: 'The Women',start: new Date(y, 2, 18, 19,0),allDay:false},
-      {title: 'The Women',start: new Date(y, 2, 19, 19,0),allDay:false},
+      {title: 'The Women',start: new Date(y, 2, 18, 20,0),allDay:false},
+      {title: 'The Women',start: new Date(y, 2, 19, 20,0),allDay:false},
       {title: 'The Women',start: new Date(y, 2, 20, 14,0),allDay:false}
     ];
 
-    /* event source that calls a function on every view switch 
-    $scope.eventsF = function (start, end, timezone, callback) {
-      var s = new Date(start).getTime() / 1000;
-      var e = new Date(end).getTime() / 1000;
-      var m = new Date(start).getMonth();
-      var events = [{title: 'Feed Me ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
-      callback(events);
-    };
-*/
     $scope.auditionevents = {
        color: '#f00',
        textColor: 'yellow',
        events: [ 
-          {title: 'Auditions',start: new Date(y, m, d, 12, 0),end: new Date(y, m, d, 14, 0),allDay: false},
-          {title: 'Auditions',start: new Date(y, m, 28),end: new Date(y, m, 29)}
+          {title: 'Auditions: Inherit the Wind',start: new Date(y, 1, 27, 10, 0), allDay: false},
+          {title: 'Auditions: Inherit the Wind',start: new Date(y, 1, 24, 18), allDay: false}
         ]
     };
 
@@ -56,34 +47,22 @@ angular.module('cctApp')
       color: 'green',
       textColor: 'pink',
       events: [
-        {title: 'Light Hang', start: new Date(y, 2, 5, 12, 30), allDay: false}
+        {title: 'Set Build', start: new Date(y, 1, 6, 9, 0), allDay: false},
+        {title: 'Set Build', start: new Date(y, 1, 13, 8, 0), allDay: false},
+        {title: 'Light Hang', start: new Date(y, 1, 20, 9, 0), allDay: false},
+        {title: 'Set Build', start: new Date(y, 1, 27, 9, 0), allDay: false}
       ]
     };
-    /* alert on eventClick */
-    $scope.alertOnEventClick = function( date, jsEvent, view){
-        $scope.alertMessage = (date.title + ' was clicked ');
+
+    $scope.otherevents = {
+      color: 'gray',
+      textColor: 'black',
+      events: [
+        {title: 'CCT Board Meeting', start: new Date(y, 1, 22, 19, 30), allDay: false},
+        {title: 'CCT Board Meeting', start: new Date(y, 2, 28, 19, 30), allDay: false}
+      ]
     };
-    /* alert on Drop */
-     $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
-       $scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
-    };
-    /* alert on Resize */
-    $scope.alertOnResize = function(event, delta, revertFunc, jsEvent, ui, view ){
-       $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
-    };
-    /* add and removes an event source of choice */
-    $scope.addRemoveEventSource = function(sources,source) {
-      var canAdd = 0;
-      angular.forEach(sources,function(value, key){
-        if(sources[key] === source){
-          sources.splice(key,1);
-          canAdd = 1;
-        }
-      });
-      if(canAdd === 0){
-        sources.push(source);
-      }
-    };
+    
     /* add custom event*/
     $scope.addEvent = function() {
       $scope.events.push({
@@ -97,22 +76,7 @@ angular.module('cctApp')
     $scope.remove = function(index) {
       $scope.events.splice(index,1);
     };
-    /* Change View */
-    $scope.changeView = function(view,calendar) {
-      uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
-    };
-    /* Change View */
-    $scope.renderCalender = function(calendar) {
-      if(uiCalendarConfig.calendars[calendar]){
-        uiCalendarConfig.calendars[calendar].fullCalendar('render');
-      }
-    };
-     /* Render Tooltip */
-    $scope.eventRender = function( event, element, view ) { 
-        element.attr({'tooltip': event.title,
-                     'tooltip-append-to-body': true});
-        $compile(element)($scope);
-    };
+
     /* config object */
     $scope.uiConfig = {
       calendar:{
@@ -131,5 +95,6 @@ angular.module('cctApp')
     };
 
     /* event sources array*/
-    $scope.eventSources = [$scope.showevents, $scope.eventSource, $scope.auditionevents, $scope.workevents]; //$scope.eventsF
+    $scope.eventSources = [$scope.showevents, $scope.auditionevents, $scope.workevents, $scope.otherevents];
+    $scope.eventSources2 = [$scope.eventSource];
   });
