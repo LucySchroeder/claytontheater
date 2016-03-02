@@ -69,12 +69,16 @@ p {
   text-align: center;
 }
 
+.participate {
+  display: flex;
+}
+
 .membership,
 .volunteer {
   position: relative;
   display: inline-block;
   width: 46%;
-  height:675px;
+  flex: 1;
   border: 5px solid red;
   margin: 20px;
   padding: 15px;
@@ -200,9 +204,6 @@ p {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-/*  .container {
-    max-width: 730px;
-  }
 
   /* Remove the padding we set earlier */
   .header,
