@@ -38,8 +38,7 @@ angular.module('cctApp')
        color: '#f00',
        textColor: 'yellow',
        events: [ 
-          {title: 'Auditions: Inherit the Wind',start: new Date(y, 1, 27, 10, 0), allDay: false},
-          {title: 'Auditions: Inherit the Wind',start: new Date(y, 1, 24, 18), allDay: false}
+          {title: 'First Inherit the Wind Readthrough',start: new Date(y, 3, 13, 19, 0), allDay: false},
         ]
     };
 
@@ -47,10 +46,8 @@ angular.module('cctApp')
       color: 'green',
       textColor: 'pink',
       events: [
-        {title: 'Set Build', start: new Date(y, 1, 6, 9, 0), allDay: false},
-        {title: 'Set Build', start: new Date(y, 1, 13, 8, 0), allDay: false},
-        {title: 'Light Hang', start: new Date(y, 1, 20, 9, 0), allDay: false},
-        {title: 'Set Build', start: new Date(y, 1, 27, 9, 0), allDay: false}
+        {title: 'Set Build', start: new Date(y, 4, 14, 9, 0), allDay: false},
+        {title: 'Light Hang', start: new Date(y, 4, 28, 9, 0), allDay: false}
       ]
     };
 
@@ -59,7 +56,9 @@ angular.module('cctApp')
       textColor: 'black',
       events: [
         {title: 'CCT Board Meeting', start: new Date(y, 1, 22, 19, 30), allDay: false},
-        {title: 'CCT Board Meeting', start: new Date(y, 2, 28, 19, 30), allDay: false}
+        {title: 'CCT Board Meeting', start: new Date(y, 2, 28, 19, 30), allDay: false},
+        {title: 'CCT Board Meeting', start: new Date(y, 3, 25, 19, 30), allDay: false},
+        {title: 'Arts for Life Theatre Mask Awards', start: new Date(y, 3, 15, 18, 0), allDay: false}
       ]
     };
     

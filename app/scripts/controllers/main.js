@@ -33,7 +33,7 @@ angular.module('cctApp')
         summary: 'This witty comedy of manners follows a group of women through the perils of adultery, divorce and \
         finding a unique voice in a sea of gossip and innuendo. The 1936 play continues to echo a relevant look in \
         the complex nature of relationships.',
-        onsale: true
+        onsale: false
     },
     {
         name: 'Inherit the Wind',
